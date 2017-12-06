@@ -9,6 +9,7 @@
 /* Menu CSS */
 .navbar-brand::first-letter {
 	color: #db2723 !important;
+   font-weight: bold !important;
 }
 .navbar-default .navbar-nav>.active > a, .navbar-default .navbar-nav>.active>a:hover, .dropdown-menu > .active > a {
     background: #db2723 !important;

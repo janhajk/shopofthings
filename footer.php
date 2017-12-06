@@ -78,7 +78,7 @@
 <a href="#" class="top-scroll"><i class="fa fa-hand-o-up"></i></a>
 </div>
 <?php wp_footer(); ?>
-<?php the_field(‘footer_script'); ?>
+<?php the_field('footer_script'); ?>
 </body>
 </html>
 

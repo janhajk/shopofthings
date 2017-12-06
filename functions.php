@@ -1,27 +1,27 @@
 <?php
-function avira_css() {
+function shopofthings_css() {
 	$parent_style = 'specia-parent-style';
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'avira-style', get_stylesheet_uri(), array( $parent_style ));
+    wp_enqueue_style( 'shopofthings-style', get_stylesheet_uri(), array( $parent_style ));
 	
-	wp_enqueue_style('avira-default',get_stylesheet_directory_uri() .'/css/colors/default.css');
+	wp_enqueue_style('shopofthings-default',get_stylesheet_directory_uri() .'/css/colors/default.css');
 	wp_dequeue_style('specia-default', get_template_directory_uri() . '/css/colors/default.css');
 	
-	wp_enqueue_style('avira-media-query',get_stylesheet_directory_uri() .'/css/media-query.css');
+	wp_enqueue_style('shopofthings-media-query',get_stylesheet_directory_uri() .'/css/media-query.css');
 	wp_dequeue_style('specia-media-query', get_template_directory_uri() . '/css/media-query.css');
 }
-add_action( 'wp_enqueue_scripts', 'avira_css',999);
+add_action( 'wp_enqueue_scripts', 'shopofthings_css',999);
    	
-function avira_setup()	{	
-	load_child_theme_textdomain( 'avira', get_stylesheet_directory() . '/languages' );
-	add_editor_style( array( 'css/editor-style.css', avira_google_font() ) );
+function shopofthings_setup()	{	
+	load_child_theme_textdomain( 'shopofthings', get_stylesheet_directory() . '/languages' );
+	add_editor_style( array( 'css/editor-style.css', shopofthings_google_font() ) );
 }
-add_action( 'after_setup_theme', 'avira_setup' );
+add_action( 'after_setup_theme', 'shopofthings_setup' );
 	
 /**
- * Register Google fonts for Avira.
+ * Register Google fonts for shopofthings.
  */
-function avira_google_font() {
+function shopofthings_google_font() {
 	
     $get_fonts_url = '';
 		
@@ -40,25 +40,25 @@ function avira_google_font() {
 	
 }
 
-function avira_scripts_styles() {
-    wp_enqueue_style( 'avira-fonts', avira_google_font(), array(), null );
+function shopofthings_scripts_styles() {
+    wp_enqueue_style( 'shopofthings-fonts', shopofthings_google_font(), array(), null );
 }
-add_action( 'wp_enqueue_scripts', 'avira_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'shopofthings_scripts_styles' );
 
-function avira_remove_parent_setting( $wp_customize ) {
+function shopofthings_remove_parent_setting( $wp_customize ) {
 	$wp_customize->remove_panel('features_panel');
 	$wp_customize->remove_control('slider-page3');
 }
-add_action( 'customize_register', 'avira_remove_parent_setting',99 );
+add_action( 'customize_register', 'shopofthings_remove_parent_setting',99 );
 
 
-function avira_remove_widgets(){
+function shopofthings_remove_widgets(){
 
 	unregister_sidebar( 'specia_feature_widget' );
 }
-add_action( 'widgets_init', 'avira_remove_widgets', 11 );
+add_action( 'widgets_init', 'shopofthings_remove_widgets', 11 );
 
-require_once( get_stylesheet_directory() . '/inc/customize/avira-premium.php');
+require_once( get_stylesheet_directory() . '/inc/customize/shopofthings-premium.php');
 
 /**
  * Load Sanitization file.

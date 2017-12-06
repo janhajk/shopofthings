@@ -18,7 +18,7 @@
  * @param bool $checked Whether the checkbox is checked.
  * @return bool Whether the checkbox is checked.
  */
-function avira_sanitize_checkbox( $checked ) {
+function shopofthings_sanitize_checkbox( $checked ) {
 	// Boolean check.
 	return ( ( isset( $checked ) && true == $checked ) ? true : false );
 }
@@ -40,7 +40,7 @@ function avira_sanitize_checkbox( $checked ) {
  * @param string $css CSS to sanitize.
  * @return string Sanitized CSS.
  */
-function avira_sanitize_css( $css ) {
+function shopofthings_sanitize_css( $css ) {
 	return wp_strip_all_tags( $css );
 }
 
@@ -60,7 +60,7 @@ function avira_sanitize_css( $css ) {
  * @param WP_Customize_Setting $setting Setting instance.
  * @return int|string Page ID if the page is published; otherwise, the setting default.
  */
-function avira_sanitize_dropdown_pages( $page_id, $setting ) {
+function shopofthings_sanitize_dropdown_pages( $page_id, $setting ) {
 	// Ensure $input is an absolute integer.
 	$page_id = absint( $page_id );
 	
@@ -84,7 +84,7 @@ function avira_sanitize_dropdown_pages( $page_id, $setting ) {
  * @param WP_Customize_Setting $setting Setting instance.
  * @return string The sanitized email if not null; otherwise, the setting default.
  */
-function avira_sanitize_email( $email, $setting ) {
+function shopofthings_sanitize_email( $email, $setting ) {
 	// Sanitize $input as a hex value without the hash prefix.
 	$email = sanitize_email( $email );
 	
@@ -108,7 +108,7 @@ function avira_sanitize_email( $email, $setting ) {
  * @param WP_Customize_Setting $setting   Setting instance.
  * @return string The sanitized hex color if not null; otherwise, the setting default.
  */
-function avira_sanitize_hex_color( $hex_color, $setting ) {
+function shopofthings_sanitize_hex_color( $hex_color, $setting ) {
 	// Sanitize $input as a hex value without the hash prefix.
 	$hex_color = sanitize_hex_color( $hex_color );
 	
@@ -133,7 +133,7 @@ function avira_sanitize_hex_color( $hex_color, $setting ) {
  * @param string $html HTML to sanitize.
  * @return string Sanitized HTML.
  */
-function avira_sanitize_html( $html ) {
+function shopofthings_sanitize_html( $html ) {
 	return wp_kses_post( force_balance_tags( $html ) );
 }
 
@@ -153,7 +153,7 @@ function avira_sanitize_html( $html ) {
  * @param WP_Customize_Setting $setting Setting instance.
  * @return string The image filename if the extension is allowed; otherwise, the setting default.
  */
-function avira_sanitize_image( $image, $setting ) {
+function shopofthings_sanitize_image( $image, $setting ) {
 
 	/*
 	 * Array of valid image file types.
@@ -193,7 +193,7 @@ function avira_sanitize_image( $image, $setting ) {
  * @param string $nohtml The no-HTML content to sanitize.
  * @return string Sanitized no-HTML content.
  */
-function avira_sanitize_nohtml( $nohtml ) {
+function shopofthings_sanitize_nohtml( $nohtml ) {
 	return wp_filter_nohtml_kses( $nohtml );
 }
 
@@ -215,7 +215,7 @@ function avira_sanitize_nohtml( $nohtml ) {
  * @param WP_Customize_Setting $setting Setting instance.
  * @return int Sanitized number; otherwise, the setting default.
  */
-function avira_sanitize_number_absint( $number, $setting ) {
+function shopofthings_sanitize_number_absint( $number, $setting ) {
 	// Ensure $number is an absolute integer (whole number, zero or greater).
 	$number = absint( $number );
 	
@@ -239,7 +239,7 @@ function avira_sanitize_number_absint( $number, $setting ) {
  * @return int|string The number, if it is zero or greater and falls within the defined range; otherwise,
  *                    the setting default.
  */
-function avira_sanitize_number_range( $number, $setting ) {
+function shopofthings_sanitize_number_range( $number, $setting ) {
 	
 	// Ensure input is an absolute integer.
 	$number = absint( $number );
@@ -276,7 +276,7 @@ function avira_sanitize_number_range( $number, $setting ) {
  * @param WP_Customize_Setting $setting Setting instance.
  * @return string Sanitized slug if it is a valid choice; otherwise, the setting default.
  */
-function avira_sanitize_select( $input, $setting ) {
+function shopofthings_sanitize_select( $input, $setting ) {
 	
 	// Ensure input is a slug.
 	$input = sanitize_key( $input );
@@ -304,18 +304,18 @@ function avira_sanitize_select( $input, $setting ) {
  * @param string $url URL to sanitize.
  * @return string Sanitized URL.
  */
-function avira_sanitize_url( $url ) {
+function shopofthings_sanitize_url( $url ) {
 	return esc_url_raw( $url );
 }
 
 
 /* Sanitization Text*/
-function avira_sanitize_text( $text ) {
+function shopofthings_sanitize_text( $text ) {
 	return wp_filter_post_kses( $text );
 }
 
 /* Sanitization Integer*/
-function avira_sanitize_integer( $input ) {
+function shopofthings_sanitize_integer( $input ) {
     if( is_numeric( $input ) ) {
         return intval( $input );
     }

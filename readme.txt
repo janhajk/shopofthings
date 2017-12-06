@@ -1,4 +1,4 @@
-##Avira 
+##shopofthings 
 
 Contributors: specia
 Requires at least: WordPress 4.4
@@ -9,12 +9,12 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-logo, translation-ready, blog
 
-Avira WordPress Theme, Copyright 2017 Specia Theme
-Avira is distributed under the terms of the GNU GPL
+shopofthings WordPress Theme, Copyright 2017 Specia Theme
+shopofthings is distributed under the terms of the GNU GPL
 
 ##Description
 
-Avira is the right theme for you if you are looking for a multipurpose theme that can handle everything you throw at it. It is perfect for marketing, corporate startup, agency, blog, business, company, creative, portfolio, professional business, food & restaurant, gym & fitness, spa salon, medical practitioner & hospitals, landing pages, product pages, corporate business, digital agency, product showcase, financial advisor, accountant, law firm, wealth advisor, photography, personal, and any eCommerce stores. The design is easy to change and adapt to the client needs.
+shopofthings is the right theme for you if you are looking for a multipurpose theme that can handle everything you throw at it. It is perfect for marketing, corporate startup, agency, blog, business, company, creative, portfolio, professional business, food & restaurant, gym & fitness, spa salon, medical practitioner & hospitals, landing pages, product pages, corporate business, digital agency, product showcase, financial advisor, accountant, law firm, wealth advisor, photography, personal, and any eCommerce stores. The design is easy to change and adapt to the client needs.
 
 ##Frequently Asked Questions
 	
@@ -24,8 +24,8 @@ Avira is the right theme for you if you are looking for a multipurpose theme tha
 
 ## Credit & Copyright
 
-Avira WordPress Theme is child theme of Specia WordPress Theme, Copyright 2017 Specia Theme
-Avira WordPress Theme is distributed under the terms of the GNU GPL
+shopofthings WordPress Theme is child theme of Specia WordPress Theme, Copyright 2017 Specia Theme
+shopofthings WordPress Theme is distributed under the terms of the GNU GPL
 
 Images
 =================================================================================================

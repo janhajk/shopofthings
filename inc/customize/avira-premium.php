@@ -1,10 +1,10 @@
 <?php
-function avira_premium_setting( $wp_customize ) {
+function shopofthings_premium_setting( $wp_customize ) {
 
 	$wp_customize->add_section(
         'upgrade_premium',
         array(
-            'title' 		=> __('Upgrade to Premium','avira'),
+            'title' 		=> __('Upgrade to Premium','shopofthings'),
             'description' 	=>'',
 		)
     );
@@ -20,13 +20,13 @@ function avira_premium_setting( $wp_customize ) {
 		?>
 			<div class="premium_info">
 				<ul>
-					<li><a href="https://demo.speciatheme.com/pro/?theme=avira" class="btn-green" target="_blank"><i class="dashicons dashicons-desktop info-icon"></i><?php _e( 'Premium Demo','avira' ); ?> </a></li>
+					<li><a href="https://demo.speciatheme.com/pro/?theme=shopofthings" class="btn-green" target="_blank"><i class="dashicons dashicons-desktop info-icon"></i><?php _e( 'Premium Demo','shopofthings' ); ?> </a></li>
 					
-					<li><a href="themes.php?page=specia-theme-info#avira" class="btn-green"><i class="dashicons dashicons-visibility"></i><?php _e( 'View Details','avira' ); ?> </a></li>
+					<li><a href="themes.php?page=specia-theme-info#shopofthings" class="btn-green"><i class="dashicons dashicons-visibility"></i><?php _e( 'View Details','shopofthings' ); ?> </a></li>
 					
-					<li><a href="https://speciatheme.com/avira-premium-wordpress-theme/" class="btn-red" target="_blank"><i class="dashicons dashicons-cart"></i><?php _e( 'Buy Now','avira' ); ?> </a></li>
+					<li><a href="https://speciatheme.com/shopofthings-premium-wordpress-theme/" class="btn-red" target="_blank"><i class="dashicons dashicons-cart"></i><?php _e( 'Buy Now','shopofthings' ); ?> </a></li>
 					
-					<li><a href="http://specia.ticksy.com/" class="btn-green" target="_blank"><i class="dashicons dashicons-sos"></i><?php _e( 'Support Center','avira' ); ?> </a></li>
+					<li><a href="http://specia.ticksy.com/" class="btn-green" target="_blank"><i class="dashicons dashicons-sos"></i><?php _e( 'Support Center','shopofthings' ); ?> </a></li>
 				</ul>
 			</div>
 		<?php
@@ -47,5 +47,5 @@ function avira_premium_setting( $wp_customize ) {
 			))
 		);
 }
-add_action( 'customize_register', 'avira_premium_setting',999 );
+add_action( 'customize_register', 'shopofthings_premium_setting',999 );
 ?>

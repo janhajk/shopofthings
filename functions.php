@@ -1,5 +1,5 @@
 <?php
-function shopofthings_css {
+function shopofthings_css() {
     $parent_style = 'specia-parent-style';
     wp_enqueue_style($parent_style, get_template_directory_uri() . '/style.css');
     wp_enqueue_style('shopofthings-style', get_stylesheet_uri(), array(

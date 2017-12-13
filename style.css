@@ -21,6 +21,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .woocommerce table.shop_attributes tr:nth-child(even) td, .woocommerce table.shop_attributes tr:nth-child(even) th {
-    background: rgba(255,0,0,.3);
+    background: rgba(255,0,0,.3) !important;
 }  color: #ffffff;
 }

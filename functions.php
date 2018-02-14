@@ -10,7 +10,7 @@ function shopofthings_css() {
    wp_enqueue_style('shopofthings-media-query',get_stylesheet_directory_uri() .'/css/media-query.css');
    wp_dequeue_style('shopofthings-media-query', get_template_directory_uri() . '/css/media-query.css');
 }
-add_action( 'wp_enqueue_scripts', 'avira_css_css', 999);
+add_action( 'wp_enqueue_scripts', 'shopofthings_css', 999);
 
 
 function shopofthings_setup() {

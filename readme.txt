@@ -1,4 +1,4 @@
-##shopofthings 
+##shopofthings
 
 Contributors: specia
 Requires at least: WordPress 4.4

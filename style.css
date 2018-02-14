@@ -28,3 +28,7 @@ ul.page-breadcrumb {
 .breadcrumb h2 {
    padding: 0px;
 }
+
+.shop_attributes td {
+   padding-left: 5px;
+}

@@ -17,11 +17,11 @@
 }
 
 .woocommerce table.shop_attributes tr:nth-child(even) td, .woocommerce table.shop_attributes tr:nth-child(even) th {
-    background: rgba(255,0,0,.3) !important;
-}  color: #ffffff;
+   background: rgba(255,0,0,.3) !important;
+   color: #ffffff;
+}
 
-
-.page-breadcrumb {
+ul.page-breadcrumb {
    padding: 0px;
 }
 

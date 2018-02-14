@@ -1,17 +1,17 @@
 <?php
 function shopofthings_css() {
-    $parent_style = 'specia-parent-style';
-    wp_enqueue_style($parent_style, get_template_directory_uri() . '/style.css');
-    wp_enqueue_style('shopofthings-style', get_stylesheet_uri(), array(
-        $parent_style
-    ));
-    wp_enqueue_style('shopofthings-default', get_stylesheet_directory_uri() . '/css/colors/default.css');
-    wp_dequeue_style('specia-default', get_template_directory_uri() . '/css/colors/default.css');
-    wp_enqueue_style('shopofthings-media-query', get_stylesheet_directory_uri() . '/css/media-query.css');
-    wp_dequeue_style('specia-media-query', get_template_directory_uri() . '/css/media-query.css');
-}
+   $parent_style = 'specia-parent-style';
+   wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+   wp_enqueue_style( 'shopofthings-style', get_stylesheet_uri(), array( $parent_style ), wp_get_theme()->get('Version'));
 
-add_action('wp_enqueue_scripts', 'shopofthings_css', 999);
+   wp_enqueue_style('shopofthings-default',get_stylesheet_directory_uri() .'/css/colors/default.css');
+   wp_dequeue_style('shopofthings-default', get_template_directory_uri() . '/css/colors/default.css');
+
+   wp_enqueue_style('shopofthings-media-query',get_stylesheet_directory_uri() .'/css/media-query.css');
+   wp_dequeue_style('shopofthings-media-query', get_template_directory_uri() . '/css/media-query.css');
+}
+add_action( 'wp_enqueue_scripts', 'avira_css_css', 999);
+
 
 function shopofthings_setup() {
     load_child_theme_textdomain('shopofthings', get_stylesheet_directory() . '/languages');

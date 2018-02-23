@@ -39,6 +39,6 @@ table th {
    border-color: none !important;
 }
 
-.page-wrapper.container.col-md-8, .page-wrapper.container.col-md-12 {
+.col-md-8 {
    float:right;
 }

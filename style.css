@@ -38,3 +38,7 @@ table th {
    background: #fff !important;
    border-color: none !important;
 }
+
+.page-wrapper.container.col-md-8, .page-wrapper.container.col-md-12 {
+   float:right;
+}

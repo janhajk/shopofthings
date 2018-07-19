@@ -51,6 +51,6 @@ table th {
    width: auto;
 }
 
-.woocommerce-form__input .woocommerce-form__input-checkbox .input-checkbox {
+.woocommerce-form__input-checkbox {
    margin 8px 0px 0px -20px;
 }

@@ -71,3 +71,41 @@ add_action('widgets_init', 'shopofthings_remove_widgets', 11);
  * Load Sanitization file.
  */
 require_once get_stylesheet_directory() . '/inc/sanitization.php';
+
+
+
+
+
+/**
+ * @snippet       WooCommerce Remove "What is PayPal?" @ Checkout
+ * @how-to        Watch tutorial @ https://businessbloomer.com/?p=19055
+ * @sourcecode    https://businessbloomer.com/?p=21186
+ * @author        Rodolfo Melogli
+ * @testedwith    WooCommerce 3.4.2
+ */
+ 
+add_filter( 'woocommerce_gateway_icon', 'bbloomer_remove_what_is_paypal', 10, 2 );
+ 
+function bbloomer_remove_what_is_paypal( $icon_html, $gateway_id ) {
+// the apply_filters comes with 2 parameters: $icon_html, $this->id
+// hence we declare 2 parameters within the function
+// and the hook above takes the "2" as we decided to pass 2 variables
+ 
+if( 'paypal' == $gateway_id ) {
+// we use one of the passed variables to make sure we only
+// run this function for the gateway ID == 'paypal'
+ 
+$icon_html = '<img src="/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png" alt="PayPal Acceptance Mark">';
+// in here we define our own $icon_html
+// note there is no mention of the "What is PayPal"
+// all we want is to repeat the part with the paypal logo
+ 
+}
+// endif
+ 
+return $icon_html;
+// we send the $icon_html variable back to the system
+// if PayPal, the system will use our custom $icon_html
+// if not, the system will use the original $icon_html
+ 
+}

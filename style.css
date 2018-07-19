@@ -47,10 +47,10 @@ table th {
    max-width: 450px;
 }
 
-.payment_method_stripe img {
-   float: right !important;
-}
-
 .woocommerce-checkout-payment label {
    width: auto;
+}
+
+.woocommerce-form__input .woocommerce-form__input-checkbox .input-checkbox {
+   margin 8px 0px 0px -20px;
 }

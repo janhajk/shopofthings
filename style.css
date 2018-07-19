@@ -42,3 +42,15 @@ table th {
 .col-md-8 {
    /*float:right;*/
 }
+
+.woocommerce div.woocommerce-checkout-payment {
+   max-width: 450px;
+}
+
+.payment_method_stripe img {
+   float: right !important;
+}
+
+.woocommerce-checkout-payment label {
+   width: auto;
+}

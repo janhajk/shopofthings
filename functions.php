@@ -13,6 +13,11 @@ function shopofthings_css() {
 add_action( 'wp_enqueue_scripts', 'shopofthings_css', 999);
 
 
+function shopofthings_javascript() {
+    wp_enqueue_script('shopofthings-js', get_stylesheet_directory_uri().'/js/shopofthings.js', array('jquery'), '1.0', true);
+}
+add_filter('child_add_javascripts','shopofthings_javascript');
+
 function shopofthings_setup() {
     load_child_theme_textdomain('shopofthings', get_stylesheet_directory() . '/languages');
     add_editor_style(array(

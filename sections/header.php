@@ -95,7 +95,7 @@
 							<li><a href="mailto:<?php echo esc_html($header_email); ?>"><i class="fa fa-envelope"></i> <?php echo esc_html($header_email); ?> </a></li>
 						<?php } ?>
 						
-<li><img src="<?php echo get_template_directory_uri(); ?>/images/bitcoin_accepted_here_small.png" /></li>
+<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/bitcoin_accepted_here_small.png" /></li>
 					</ul>
 					<!-- /End Contact Info -->
 				<?php } ?>

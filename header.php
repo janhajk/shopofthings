@@ -21,7 +21,7 @@
         </a>
 <?php endif;  ?>
 
-<?php get_template_part('sections/header'); ?>
+<?php get_template_part('sections/specia','header'); ?>
 
 <?php get_template_part('sections/specia','navigation'); ?>
 

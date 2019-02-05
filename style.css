@@ -1,56 +1,13 @@
 /*
- Theme Name:   shopofthings
- Theme URI:    https://shopofthings.ch
- Description:  Specia Child Theme
- Author:       Jan Schar
- Author URI:   https://janschaer.ch
- Template:     specia
- Version:      1.0.15
- License:      GNU General Public License v2 or later
- License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
- Text Domain:  shopofthings
+ Theme Name:    Electro Shopofthings
+ Theme URI:     https://themeforest.net/item/electro-electronics-store-woocommerce-theme/15720624
+ Description:   This is the child theme of Electro for ShopOfThings.ch
+ Author:        MadrasThemes
+ Author URI:    https://madrasthemes.com/
+ Template:      electro
+ Version:       2.1.3
+ License:       GNU General Public License v2 or later
+ License URI:   http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:          light, dark, two-columns, right-sidebar, responsive-layout
+ Text Domain:   electro-shopofthings
 */
-
-.post_date h6 {
-   color: #ffffff;
-}
-
-.woocommerce table.shop_attributes tr:nth-child(even) td, .woocommerce table.shop_attributes tr:nth-child(even) th {
-   background: rgba(0,0,255,0.05) !important;
-   color: #747474;
-}
-
-ul.page-breadcrumb {
-   padding: 0px;
-}
-
-.breadcrumb h2 {
-   padding: 0px;
-}
-
-.shop_attributes td {
-   padding-left: 5px !important;
-}
-
-table th {
-   color: #747474 !important;
-   background: #fff !important;
-   border-color: none !important;
-}
-
-.col-md-8 {
-   /*float:right;*/
-}
-
-.woocommerce div.woocommerce-checkout-payment {
-   max-width: 450px;
-}
-
-.woocommerce-checkout-payment label {
-   width: auto;
-}
-
-input.woocommerce-form__input-checkbox {
-   margin: 8px 0px 0px -20px !important;
-}

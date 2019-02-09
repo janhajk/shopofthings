@@ -51,4 +51,5 @@ function createAdsenseBlogResponsive() {
     }
     return $ad;
 }
-//add_shortcode('adsenseBlogResponsive', 'createAdsenseBlogResponsive');
+add_shortcode('adsenseBlogResponsive', 'createAdsenseBlogResponsive');
+?>

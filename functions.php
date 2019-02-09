@@ -14,7 +14,7 @@ function electro_shopofthings_enqueue_styles() {
 
 
 
-function createAdsense468by60() {
+function createAdsenseBlogResponsive() {
     $ad = '';
     
     require_once '/var/www/vhosts/jan/shopofthings/wordpress/wp-content/geoip/vendor/autoload.php';
@@ -51,3 +51,4 @@ function createAdsense468by60() {
     }
     return $ad;
 }
+add_shortcode('adsenseBlogResponsive', 'createAdsenseBlogResponsive');

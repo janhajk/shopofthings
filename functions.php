@@ -51,4 +51,11 @@ function createAdsenseBlogResponsive() {
 }
 add_shortcode('adsenseBlogResponsive', 'createAdsenseBlogResponsive');
 
+
+
+/*
+ * Remove jetpack ads
+ *
+ */
+add_filter( 'jetpack_just_in_time_msgs', '__return_false' );
 ?>

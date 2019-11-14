@@ -46,7 +46,7 @@ function createAdsenseBlogResponsive() {
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script></div>
              ';
-    }
+    // }
     $ad = '';
     return $ad;
 }

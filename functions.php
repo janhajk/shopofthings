@@ -13,26 +13,26 @@ function electro_shopofthings_enqueue_styles() {
 
 
 
-require_once '/var/www/vhosts/jan/shopofthings/wordpress/wp-content/geoip/vendor/autoload.php';
-use GeoIp2\Database\Reader;
+// require_once '/var/www/vhosts/jan/shopofthings/wordpress/wp-content/geoip/vendor/autoload.php';
+// use GeoIp2\Database\Reader;
 function createAdsenseBlogResponsive() {
     $ad = '';
 
-    // This creates the Reader object, which should be reused across
-    // lookups.
-    $reader = new Reader('/var/www/vhosts/jan/shopofthings/wordpress/wp-content/geoip/GeoLite2-Country_20190205/GeoLite2-Country.mmdb');
+    // // This creates the Reader object, which should be reused across
+    // // lookups.
+    // $reader = new Reader('/var/www/vhosts/jan/shopofthings/wordpress/wp-content/geoip/GeoLite2-Country_20190205/GeoLite2-Country.mmdb');
     
     
-    if (!isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-        $IP = $_SERVER['REMOTE_ADDR'];
-    }
-    else {
-        $IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    }
-    $record = $reader->country($IP);
-    $ISO = $record->country->isoCode;
+    // if (!isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    //     $IP = $_SERVER['REMOTE_ADDR'];
+    // }
+    // else {
+    //     $IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    // }
+    // $record = $reader->country($IP);
+    // $ISO = $record->country->isoCode;
 
-    if (!in_array($ISO, array('CH', 'LI'))) {
+    // if (!in_array($ISO, array('CH', 'LI'))) {
         $ad = '<div align="center">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Blog_Ad -->
@@ -47,6 +47,7 @@ function createAdsenseBlogResponsive() {
 </script></div>
              ';
     }
+    $ad = '';
     return $ad;
 }
 add_shortcode('adsenseBlogResponsive', 'createAdsenseBlogResponsive');

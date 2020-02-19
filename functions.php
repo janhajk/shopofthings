@@ -59,4 +59,22 @@ add_shortcode('adsenseBlogResponsive', 'createAdsenseBlogResponsive');
  *
  */
 add_filter( 'jetpack_just_in_time_msgs', '__return_false' );
+
+
+/*
+* Reduce the strength requirement for woocommerce registration password.
+* Strength Settings:
+* 0 = Nothing = Anything
+* 1 = Weak
+* 2 = Medium
+* 3 = Strong (default)
+*/
+
+add_filter( 'woocommerce_min_password_strength', 'wpglorify_woocommerce_password_filter', 10 );
+function wpglorify_woocommerce_password_filter() {
+      return 1;
+} 
+
+
+
 ?>

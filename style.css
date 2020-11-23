@@ -11,3 +11,9 @@
  Tags:          light, dark, two-columns, right-sidebar, responsive-layout
  Text Domain:   electro-shopofthings
 */
+
+
+
+div[id^='onsale-products-carousel-'].woocommerce-Price-amount {
+ font-size: 16px;
+}

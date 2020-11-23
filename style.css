@@ -15,5 +15,5 @@
 
 
 [id*="onsale-products-carousel"] .savings .amount {
- font-size: 16px;
+ font-size: 16px !important;
 }

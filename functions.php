@@ -75,7 +75,7 @@ function wpglorify_woocommerce_password_filter() {
       return 1;
 }
 
-add_filter( 'allow_subdirectory_install', create_function( '', 'return true;' ));
+//add_filter( 'allow_subdirectory_install', create_function( '', 'return true;' ));
 
 
 

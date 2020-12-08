@@ -61,6 +61,13 @@ add_shortcode('adsenseBlogResponsive', 'createAdsenseBlogResponsive');
 add_filter( 'jetpack_just_in_time_msgs', '__return_false' );
 
 
+/**
+ * Display Shortcode in description fields like attribute pages
+ * 
+ */
+add_filter( 'term_description', 'do_shortcode' );
+
+
 /*
 * Reduce the strength requirement for woocommerce registration password.
 * Strength Settings:

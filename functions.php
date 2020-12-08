@@ -64,10 +64,11 @@ add_filter( 'jetpack_just_in_time_msgs', '__return_false' );
 /**
  * Display Shortcode in description fields like attribute pages
  *
+ * not working anymore
  */
-add_filter( 'term_description', 'shortcode_unautop' );
-add_filter( 'term_description', 'do_shortcode' );
-remove_filter( 'pre_term_description', 'wp_filter_kses' );
+// add_filter( 'term_description', 'shortcode_unautop' );
+// add_filter( 'term_description', 'do_shortcode' );
+// remove_filter( 'pre_term_description', 'wp_filter_kses' );
 
 
 /*

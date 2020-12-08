@@ -63,9 +63,11 @@ add_filter( 'jetpack_just_in_time_msgs', '__return_false' );
 
 /**
  * Display Shortcode in description fields like attribute pages
- * 
+ *
  */
 add_filter( 'term_description', 'do_shortcode' );
+add_filter( 'category_description', 'do_shortcode' );
+add_filter( 'attribute_description', 'do_shortcode' );
 
 
 /*
@@ -137,11 +139,11 @@ s.parentNode.insertBefore(b, s);})();
 
 
 /**
- * 
+ *
  * Remove "Archive" from all page titles
- * 
- * 
- * 
+ *
+ *
+ *
  */
 add_filter( 'get_the_archive_title', function ($title) {
  if ( is_category() ) {
@@ -151,7 +153,7 @@ add_filter( 'get_the_archive_title', function ($title) {
  } elseif ( is_author() ) {
  $title = '<span class="vcard">' . get_the_author() . '</span>' ;
  }
- 
+
  return $title;
 });
 

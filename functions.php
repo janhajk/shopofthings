@@ -160,6 +160,26 @@ add_filter( 'get_the_archive_title', function ($title) {
 
 
 
+add_filter( 'woocommerce_get_availability', 'wcs_custom_get_availability', 1, 2);
+function wcs_custom_get_availability( $availability, $_product ) {
+  $id = $_product->get_id();
+    $product_stock = $_product->get_stock_quantity();
+    if($product_stock){
+      $big_stock_available = get_post_meta($id,'product_bigstock_threshold',true);
+      $low_stock_available = get_post_meta($id,'product_lowstock_threshold',true);
+      if($big_stock_available != '' && $product_stock > $big_stock_available ){
+         $availability['availability'] = __('More than '.$big_stock_available.' in Stock', 'woocommerce');
+      }
+      else if($lowstock_available != '' && $product_stock <= $lowstock_available){
+         $availability['availability'] = __('Only '.$product_stock.' left', 'woocommerce');
+      }
+    }
+    return $availability;
+}
+
+
+
+
 
 
 

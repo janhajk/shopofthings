@@ -169,11 +169,17 @@ function wcs_custom_get_availability( $availability, $_product ) {
     if($product_stock){
       $big_stock_available = get_post_meta($id,'product_bigstock_threshold',true);
       $low_stock_available = get_post_meta($id,'product_lowstock_threshold',true);
-      if(($big_stock_available != '' && $product_stock > $big_stock_available) || $product_stock >= $DEFAULT_BIG_STOCK_THRESHOLD){
+      if(($big_stock_available != '' && $product_stock > $big_stock_available)){
          $availability['availability'] = __('>'.$big_stock_available.' sofort versandbereit', 'woocommerce');
       }
-      else if(($lowstock_available != '' && $product_stock <= $lowstock_available) || $product_stock < $DEFAULT_LOW_STOCK_THRESHOLD){
+      else if(($lowstock_available != '' && $product_stock <= $lowstock_available)){
          $availability['availability'] = __('Nur noch '.$product_stock.' auf Lager', 'woocommerce');
+      }
+      else if ($product_stock >= $DEFAULT_BIG_STOCK_THRESHOLD) {
+            $availability['availability'] = __('>'.$DEFAULT_BIG_STOCK_THRESHOLD.' sofort versandbereit', 'woocommerce');
+      }
+      else if ($product_stock < $DEFAULT_LOW_STOCK_THRESHOLD) {
+            $availability['availability'] = __('Nur noch '.$DEFAULT_LOW_STOCK_THRESHOLD.' auf Lager', 'woocommerce');
       }
     }
     return $availability;

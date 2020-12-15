@@ -179,7 +179,7 @@ function wcs_custom_get_availability( $availability, $_product ) {
             $availability['availability'] = __('>'.$DEFAULT_BIG_STOCK_THRESHOLD.' sofort versandbereit', 'woocommerce');
       }
       else if ($product_stock < $DEFAULT_LOW_STOCK_THRESHOLD) {
-            $availability['availability'] = __('Nur noch '.$DEFAULT_LOW_STOCK_THRESHOLD.' auf Lager', 'woocommerce');
+            $availability['availability'] = __('Nur noch '.$product_stock.' auf Lager', 'woocommerce');
       }
     }
     return $availability;
